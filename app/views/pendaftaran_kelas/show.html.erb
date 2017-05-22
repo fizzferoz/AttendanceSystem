@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @pendaftaran_kela.program %>
+</p>
+
+<p>
+  <strong>Penganjur:</strong>
+  <%= @pendaftaran_kela.penganjur %>
+</p>
+
+<p>
+  <strong>Tujuan:</strong>
+  <%= @pendaftaran_kela.tujuan %>
+</p>
+
+<p>
+  <strong>Tempohmasamula:</strong>
+  <%= @pendaftaran_kela.tempohmasamula %>
+</p>
+
+<p>
+  <strong>Tempohmasatamat:</strong>
+  <%= @pendaftaran_kela.tempohmasatamat %>
+</p>
+
+<%= link_to 'Edit', edit_pendaftaran_kela_path(@pendaftaran_kela) %> |
+<%= link_to 'Back', pendaftaran_kelas_path %>

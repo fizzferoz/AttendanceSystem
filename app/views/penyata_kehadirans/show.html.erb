@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tarikh:</strong>
+  <%= @penyata_kehadiran.tarikh %>
+</p>
+
+<p>
+  <strong>Masamula:</strong>
+  <%= @penyata_kehadiran.masamula %>
+</p>
+
+<p>
+  <strong>Masatamat:</strong>
+  <%= @penyata_kehadiran.masatamat %>
+</p>
+
+<%= link_to 'Edit', edit_penyata_kehadiran_path(@penyata_kehadiran) %> |
+<%= link_to 'Back', penyata_kehadirans_path %>

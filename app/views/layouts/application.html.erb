@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AttandanceSystem</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+  <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> SPPM</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+    
+    	  <li c><a href="/pendaftaran_kelas">Pendaftaran Kelas</a></li>
+            <li ><a href="/penyata_kehadirans">Penyata Kehadiran</a></li>
+            
+
+
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"></span> Laporan Pengunaan Makmal</a>
+						<ul class="dropdown-menu">
+							
+							<li><a href="<%= pendaftaran_kelas_path%>">Senarai Kelas</a></li>
+							<li><a href="<%= penyata_kehadirans_path %>">Senarai Penyata Kehadiran</a></li>
+							<li><a href="<%= pengunamakmals_path %>">Senarai PengunaMakmal</a></li>
+						</ul>
+					</li>
+
+           
+</ul>
+              <ul class="nav navbar-nav navbar-right">
+
+             <li><a data-method="delete"  href="/users/sign_out"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li></ul>
+    
+  </div>
+</nav>
+ 
+
+<%= content_tag(:div, flash[:alert], :id => "flash_alert", class: 'alert alert-danger') if flash[:alert] %>
+<%= content_tag(:div, flash[:notice], :id => "flash_notice", class: 'alert alert-success') if flash[:notice] %>
+    <%= yield %>
+    <footer class="footer">
+
+<p class="text-center">@Sistem Pengurusan Pengunaan Makmal(2017)</p>
+</footer>
+  </body>
+</html>

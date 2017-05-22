@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Statuskehadiranpengunamakmals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Statuskehadiran</th>
+      <th>Statusmasuk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statuskehadiranpengunamakmals.each do |statuskehadiranpengunamakmal| %>
+      <tr>
+        <td><%= statuskehadiranpengunamakmal.statuskehadiran %></td>
+        <td><%= statuskehadiranpengunamakmal.statusmasuk %></td>
+        <td><%= link_to 'Show', statuskehadiranpengunamakmal %></td>
+        <td><%= link_to 'Edit', edit_statuskehadiranpengunamakmal_path(statuskehadiranpengunamakmal) %></td>
+        <td><%= link_to 'Destroy', statuskehadiranpengunamakmal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Statuskehadiranpengunamakmal', new_statuskehadiranpengunamakmal_path %>

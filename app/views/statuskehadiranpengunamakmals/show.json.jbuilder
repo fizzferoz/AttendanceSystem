@@ -1,0 +1,1 @@
+json.partial! "statuskehadiranpengunamakmals/statuskehadiranpengunamakmal", statuskehadiranpengunamakmal: @statuskehadiranpengunamakmal

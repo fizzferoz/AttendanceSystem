@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Penyata Kehadirans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tarikh</th>
+      <th>Masamula</th>
+      <th>Masatamat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @penyata_kehadirans.each do |penyata_kehadiran| %>
+      <tr>
+        <td><%= penyata_kehadiran.tarikh %></td>
+        <td><%= penyata_kehadiran.masamula %></td>
+        <td><%= penyata_kehadiran.masatamat %></td>
+        <td><%= link_to 'Show', penyata_kehadiran %></td>
+        <td><%= link_to 'Edit', edit_penyata_kehadiran_path(penyata_kehadiran) %></td>
+        <td><%= link_to 'Destroy', penyata_kehadiran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Penyata Kehadiran', new_penyata_kehadiran_path %>

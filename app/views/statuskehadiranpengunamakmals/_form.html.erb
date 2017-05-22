@@ -1,0 +1,27 @@
+<%= form_for(statuskehadiranpengunamakmal) do |f| %>
+  <% if statuskehadiranpengunamakmal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(statuskehadiranpengunamakmal.errors.count, "error") %> prohibited this statuskehadiranpengunamakmal from being saved:</h2>
+
+      <ul>
+      <% statuskehadiranpengunamakmal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :statuskehadiran %>
+    <%= f.text_field :statuskehadiran %>
+  </div>
+
+  <div class="field">
+    <%= f.label :statusmasuk %>
+    <%= f.text_field :statusmasuk %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

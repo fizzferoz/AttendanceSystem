@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pengunamakmals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Nombormatrix</th>
+      <th>Masamasukprogram</th>
+      <th>Masakeluarprogram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pengunamakmals.each do |pengunamakmal| %>
+      <tr>
+        <td><%= pengunamakmal.nama %></td>
+        <td><%= pengunamakmal.nombormatrix %></td>
+        <td><%= pengunamakmal.masamasukprogram %></td>
+        <td><%= pengunamakmal.masakeluarprogram %></td>
+        <td><%= link_to 'Show', pengunamakmal %></td>
+        <td><%= link_to 'Edit', edit_pengunamakmal_path(pengunamakmal) %></td>
+        <td><%= link_to 'Destroy', pengunamakmal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pengunamakmal', new_pengunamakmal_path %>

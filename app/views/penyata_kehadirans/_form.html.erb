@@ -1,0 +1,32 @@
+<%= form_for(penyata_kehadiran) do |f| %>
+  <% if penyata_kehadiran.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(penyata_kehadiran.errors.count, "error") %> prohibited this penyata_kehadiran from being saved:</h2>
+
+      <ul>
+      <% penyata_kehadiran.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tarikh %>
+    <%= f.datetime_select :tarikh %>
+  </div>
+
+  <div class="field">
+    <%= f.label :masamula %>
+    <%= f.datetime_select :masamula %>
+  </div>
+
+  <div class="field">
+    <%= f.label :masatamat %>
+    <%= f.datetime_select :masatamat %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

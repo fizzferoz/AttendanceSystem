@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tarikh: 2017-04-10 03:30:49
+  masamula: 2017-04-10 03:30:49
+  masatamat: 2017-04-10 03:30:49
+
+two:
+  tarikh: 2017-04-10 03:30:49
+  masamula: 2017-04-10 03:30:49
+  masatamat: 2017-04-10 03:30:49

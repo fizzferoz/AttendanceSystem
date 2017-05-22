@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pendaftaran Kelas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Program</th>
+      <th>Penganjur</th>
+      <th>Tujuan</th>
+      <th>Tempohmasamula</th>
+      <th>Tempohmasatamat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pendaftaran_kelas.each do |pendaftaran_kela| %>
+      <tr>
+        <td><%= pendaftaran_kela.program %></td>
+        <td><%= pendaftaran_kela.penganjur %></td>
+        <td><%= pendaftaran_kela.tujuan %></td>
+        <td><%= pendaftaran_kela.tempohmasamula %></td>
+        <td><%= pendaftaran_kela.tempohmasatamat %></td>
+        <td><%= link_to 'Show', pendaftaran_kela %></td>
+        <td><%= link_to 'Edit', edit_pendaftaran_kela_path(pendaftaran_kela) %></td>
+        <td><%= link_to 'Destroy', pendaftaran_kela, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pendaftaran Kela', new_pendaftaran_kela_path %>

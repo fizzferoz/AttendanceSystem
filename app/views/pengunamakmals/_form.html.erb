@@ -1,0 +1,37 @@
+<%= form_for(pengunamakmal) do |f| %>
+  <% if pengunamakmal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pengunamakmal.errors.count, "error") %> prohibited this pengunamakmal from being saved:</h2>
+
+      <ul>
+      <% pengunamakmal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nama %>
+    <%= f.text_field :nama %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nombormatrix %>
+    <%= f.number_field :nombormatrix %>
+  </div>
+
+  <div class="field">
+    <%= f.label :masamasukprogram %>
+    <%= f.datetime_select :masamasukprogram %>
+  </div>
+
+  <div class="field">
+    <%= f.label :masakeluarprogram %>
+    <%= f.datetime_select :masakeluarprogram %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

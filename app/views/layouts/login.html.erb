@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Sistem Pengurusan Pengunaan Makmal Keselamatan Pusat Keselamatan Siber University Pertahanan Malaysia</title>
+  <link rel="icon" type="image/png" href="/assets/upnm.png" >
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SPPM</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/dashboard"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<%= content_tag(:div, flash[:alert], :id => "flash_alert", class: 'alert alert-danger') if flash[:alert] %>
+<%= content_tag(:div, flash[:notice], :id => "flash_notice", class: 'alert alert-success') if flash[:notice] %><br>
+<center>  
+<div class = "row" >
+<div class = "col-md-6 col-md-offset-3">
+<div class="jumbotron" >
+
+<%= yield %></center>
+
+</div>
+</div>
+</div>
+
+  <footer class="footer">
+
+<p class="text-center">@Sistem Pengurusan Pengunaan Makmal(2017)</p>
+</footer>
+</body>
+</html>
+
